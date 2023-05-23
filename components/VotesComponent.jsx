@@ -17,7 +17,7 @@ const VotesComponent = () => {
       }
       setIsLoading(true) // Set loading state to true
       const response = await axios.get(
-        `http://localhost:3001/votes/${signer._address}`
+        `https://tokenized-ballot-backend.vercel.app/${signer._address}`
       ) // <-- Use signer's address
       const votesValue = ethers.utils.formatEther(response.data.hex)
       const formattedVotes = votesValue.toString()

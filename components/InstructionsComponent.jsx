@@ -132,7 +132,7 @@ export default function InstructionsComponent() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ address: signer._address, signature: signature }),
     }
-    fetch('http://localhost:3001/request-tokens', requestOptions)
+    fetch('https://tokenized-ballot-backend.vercel.app/', requestOptions)
       .then((response) => response.json())
       .then((data) => {
         setTxData(data)
