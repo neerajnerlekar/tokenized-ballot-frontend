@@ -16,7 +16,7 @@ const BalanceComponent = () => {
       }
       setIsLoading(true) // Set loading state to true
       const response = await axios.get(
-        `http://localhost:3001/balance/${signer._address}`
+        `http://localhost:3001/balanceOf/${signer._address}`
       ) // <-- Use signer's address
       const balanceValue = ethers.BigNumber.from(response.data.hex)
       const formattedBalance = ethers.utils.formatEther(balanceValue)
