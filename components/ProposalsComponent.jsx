@@ -12,7 +12,7 @@ const ProposalComponent = () => {
   const fetchProposalVoteCount = async (index) => {
     try {
       const response = await axios.get(
-        `https://tokenized-ballot-backend.vercel.app/${index}`
+        `https://tokenized-ballot-backend.herokuapp.com/proposals/${index}`
       )
       const voteCount = ethers.utils.formatEther(response.data.voteCount)
       const formattedVoteCount = parseFloat(voteCount).toFixed(2)

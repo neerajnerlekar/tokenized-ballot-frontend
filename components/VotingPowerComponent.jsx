@@ -16,7 +16,7 @@ const VotingPowerComponent = () => {
       }
       setIsLoading(true) // Set loading state to true
       const response = await axios.get(
-        `https://tokenized-ballot-backend.vercel.app/${signer._address}`
+        `https://tokenized-ballot-backend.herokuapp.com/voting-power/${signer._address}`
       ) // <-- Use signer's address
       const balanceValue = ethers.BigNumber.from(response.data.hex)
       const formattedBalance = ethers.utils.formatEther(balanceValue)

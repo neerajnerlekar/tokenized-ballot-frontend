@@ -16,7 +16,7 @@ const TokenRequestForm = () => {
 
     try {
       const response = await axios.post(
-        'https://tokenized-ballot-backend.vercel.app/',
+        'https://tokenized-ballot-backend.herokuapp.com/request-tokens/',
         {
           address,
         }
